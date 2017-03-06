@@ -1,47 +1,40 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 
 void primo(int *);
-void datos(int *);
+
 int main()
 {
-    int n;
-    int *pn=&n;
+    int n, *pn=&n;
+
+    printf("Ingrese numero:\n ");
+    scanf("%d",&(*pn));
+
+    printf("La direccion de memoria es %d\n",pn);
+
     primo(pn);
-    datos(pn);
 
     return 0;
 }
 
-void datos(int *pnu)
-{
-    printf("ingrese numero: \n");
-    scanf("%d",&(*pnu));
-
-    printf("su direccion en memoria es %d",pnu);
-}
-
-
-
-void primo(int *pnu)
+void primo(int *pn)
 {
     int c=0;
-    for(int i=0;i<=*pnu;i++)
+    for(int i=1;i<=*pn;i++)
     {
-        if(*pnu%i==0)
+        if(*pn%i==0)
         {
-            c++;
+            c=c+1;
         }
     }
+
     if(c==2)
     {
-        printf("el numero %d es primo\n",*pnu);
+        printf("El numero %d si es primo",*pn);
     }
     else
     {
-        printf("el numero %d no es primo\n",*pnu);
+        printf("El numero %d no es primo",*pn);
     }
-
 }
-
-
-
