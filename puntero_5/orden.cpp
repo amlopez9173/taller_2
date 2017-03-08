@@ -4,18 +4,18 @@
 
 void orden(int *,int *);
 
-
+int n,*p=&n;
+int *pv;
 
 int main()
 {
 
-int n,*p=&n;
-int v[*p],*pv=v;
-
 printf("ingrese parametro del arreglo\n");
 scanf("%d",&n);
 
-for(int i=0;i<*p;i++)
+pv=(int *)malloc(sizeof(int)*n);
+
+for(int i=0;i<n;i++)
 {
     printf(" ingrese el numero %d :",i+1);
     scanf("%d",&(*(pv+i)));
