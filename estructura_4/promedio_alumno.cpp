@@ -11,7 +11,7 @@ struct alumno
     char nombre[30],sexo[10];
     int edad;
     promedio prom;
-};
+}
 
 void prom(float a,float b,float c)
     {
